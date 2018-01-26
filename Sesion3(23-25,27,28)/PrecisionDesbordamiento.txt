@@ -1,0 +1,32 @@
+En el primer ejemplo (a), he obtenido -557712591 como resultado 
+de la operación 1234567*1234567. Se ha producido un claro caso 
+de desbordamiento, ya que el resultado de la operación es
+1 524 155 677 489 y necesitaría asignar 64 bits (long long) para
+evitar este fenómeno.
+
+En el segundo ejemplo (b), he obtenido el mismo resultado 
+(-557712591), se ha producido igualmente desbordamiento 
+porque los 32 bits que asigna una variable entera del tipo long
+no son suficientes.
+
+En el tercer ejemplo (c), he obtenido el resultado correcto
+(15289.02), sin embargo, se produce una pérdida de precisión a partir
+de la decimo tercera cifra decimal.
+
+En el cuarto ejemplo (d), el resultado obtenido es el correcto 
+(15241578787227558), no obstante, se ha producido pérdida de 
+precisión al omitirse la parte decimal y limitarse al redondeo.
+
+En el quinto ejemplo (e), el resultado esperado era claramente 1,
+sin embargo, al tratarse de dos números tan grandes, el programa
+los ha considerado como el mismo a pesar de diferenciarse en una unidad,
+por lo que el resultado obtenido ha sido incorrecto (0).
+
+En el sexto ejemplo (f), a pesar de que el resultado correcto era 1,
+el programa se ha desbordado y ha dado infinito como solución al carecer
+del razonamiento lógico para resolver la operación.
+
+En el séptimo ejemplo (g), el resultado obtenido ha sido nuevamente infinito,
+causa del desbordamiento al asignar un número tan grande a una variable float.
+Mostrando esa misma cantidad asignada a una variable double, el resultado es 
+correcto pero se produce nuevamente pérdida de precisión.
