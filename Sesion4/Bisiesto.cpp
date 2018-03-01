@@ -1,4 +1,4 @@
-/* Programa que dice si un a�o es bisiesto o no */
+/* Programa que dice si un año es bisiesto o no */
 
 #include<iostream>
 #include<cmath>
@@ -8,7 +8,7 @@ using namespace std;
 int main () {
   int ano;
 
-  cout << "Inserte a�o: ";
+  cout << "Inserte año: ";
   cin >> ano;
 
   if ((ano % 400) == 0)

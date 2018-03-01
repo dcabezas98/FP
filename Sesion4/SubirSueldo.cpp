@@ -1,7 +1,7 @@
-/* Programa que gestiona la n�mina de los empleados
-   a partir del salario por hora y el n�mero de horas
-   trabajadas. Adem�s, el programa aplica subidas
-   por objetivos de casos resueltos y satisfacci�n
+/* Programa que gestiona la nómina de los empleados
+   a partir del salario por hora y el número de horas
+   trabajadas. Ademΰas, el programa aplica subidas
+   por objetivos de casos resueltos y satisfacción
    del cliente. */
 
 #include<iostream>
@@ -15,9 +15,9 @@ int main () {
 
   cout << "Inserte salario por hora: ";
   cin >> salario_hora;
-  cout << "Inserte n�mero de horas trabajadas: ";
+  cout << "Inserte número de horas trabajadas: ";
   cin >> horas_trabajadas;
-  cout << "Inserte n�mero de casos resueltos: ";
+  cout << "Inserte número de casos resueltos: ";
   cin >> casos_resueltos;
 
   salario_final = salario_hora * horas_trabajadas;
@@ -29,5 +29,5 @@ int main () {
   cout << "El salario final es de: " << salario_final << "\n";
 }
 
-/* El programa no solicita el grado de satisfacci�n porque a�n no es
-   necesario, se implementar� en posteriores ejercicios. */
+/* El programa no solicita el grado de satisfacción porque aún no es
+   necesario, se implementará en posteriores ejercicios. */
