@@ -1,38 +1,35 @@
-/* Programa que dice si tres enteros están ordenados
+/* Programa que dice si tres enteros estï¿½n ordenados
    o no, ya sea en orden ascendente o descendente */
-	
+
 #include<iostream>
 #include<cmath>
-	
+
 using namespace std;
-	
+
 int main () {
-	
+
   int numero1, numero2, numero3;
   bool creciente, decreciente;
-		
-  cout << "Inserte primer número: ";
+
+  cout << "Inserte primer nï¿½mero: ";
   cin >> numero1;
-  cout << "Inserte segundo número: ";
+  cout << "Inserte segundo nï¿½mero: ";
   cin >> numero2;
-  cout << "Inserte tercer número: "; 
+  cout << "Inserte tercer nï¿½mero: ";
   cin >> numero3;
-	   
+
   creciente = numero1 <= numero2 && numero2 <= numero3;
   decreciente = numero1 >= numero2 && numero2 >= numero3;
-		
-  if (creciente && !decreciente) 
-    cout << "Los números están ordenados en orden creciente.\n"; 
-		
-  else if (decreciente && !creciente) 
-    cout << "Los números están ordenados en orden decreciente.\n"; 
-		
-  else if (creciente && decreciente) 
-    cout << "Los tres números son iguales.\n"; 
-		
+
+  if (creciente && !decreciente)
+    cout << "Los nï¿½meros estï¿½n ordenados en orden creciente.\n";
+
+  else if (decreciente && !creciente)
+    cout << "Los nï¿½meros estï¿½n ordenados en orden decreciente.\n";
+
+  else if (creciente && decreciente)
+    cout << "Los tres nï¿½meros son iguales.\n";
+
   else (
-	cout << "Los números no presentan orden.\n"); 
-	
-  system("pause");
-	
-}	
+	cout << "Los nï¿½meros no presentan orden.\n"); 
+}
