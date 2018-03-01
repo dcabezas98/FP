@@ -1,32 +1,32 @@
-En el primer ejemplo (a), he obtenido -557712591 como resultado 
-de la operaci髇 1234567*1234567. Se ha producido un claro caso 
-de desbordamiento, ya que el resultado de la operaci髇 es
-1 524 155 677 489 y necesitar韆 asignar 64 bits (long long) para
-evitar este fen髆eno.
+En el primer ejemplo (a), he obtenido -557712591 como resultado
+de la operaci贸n 1234567*1234567. Se ha producido un claro caso
+de desbordamiento, ya que el resultado de la operaci贸n es
+1 524 155 677 489 y necesitar谩 asignar 64 bits (long long) para
+evitar este fen贸meno.
 
-En el segundo ejemplo (b), he obtenido el mismo resultado 
-(-557712591), se ha producido igualmente desbordamiento 
+En el segundo ejemplo (b), he obtenido el mismo resultado
+(-557712591), se ha producido igualmente desbordamiento
 porque los 32 bits que asigna una variable entera del tipo long
 no son suficientes.
 
 En el tercer ejemplo (c), he obtenido el resultado correcto
-(15289.02), sin embargo, se produce una p閞dida de precisi髇 a partir
+(15289.02), sin embargo, se produce una p茅rdida de precisi贸n a partir
 de la decimo tercera cifra decimal.
 
-En el cuarto ejemplo (d), el resultado obtenido es el correcto 
-(15241578787227558), no obstante, se ha producido p閞dida de 
-precisi髇 al omitirse la parte decimal y limitarse al redondeo.
+En el cuarto ejemplo (d), el resultado obtenido es el correcto
+(15241578787227558), no obstante, se ha producido p茅rdida de
+precisi贸n al omitirse la parte decimal y limitarse al redondeo.
 
 En el quinto ejemplo (e), el resultado esperado era claramente 1,
-sin embargo, al tratarse de dos n鷐eros tan grandes, el programa
+sin embargo, al tratarse de dos n煤meros tan grandes, el programa
 los ha considerado como el mismo a pesar de diferenciarse en una unidad,
 por lo que el resultado obtenido ha sido incorrecto (0).
 
 En el sexto ejemplo (f), a pesar de que el resultado correcto era 1,
-el programa se ha desbordado y ha dado infinito como soluci髇 al carecer
-del razonamiento l骻ico para resolver la operaci髇.
+el programa se ha desbordado y ha dado infinito como soluci贸n al carecer
+del razonamiento l贸gico para resolver la operaci贸n.
 
-En el s閜timo ejemplo (g), el resultado obtenido ha sido nuevamente infinito,
-causa del desbordamiento al asignar un n鷐ero tan grande a una variable float.
-Mostrando esa misma cantidad asignada a una variable double, el resultado es 
-correcto pero se produce nuevamente p閞dida de precisi髇.
+En el s茅ptimo ejemplo (g), el resultado obtenido ha sido nuevamente infinito,
+causa del desbordamiento al asignar un n煤mero tan grande a una variable float.
+Mostrando esa misma cantidad asignada a una variable double, el resultado es
+correcto pero se produce nuevamente p茅rdida de precisi贸n.

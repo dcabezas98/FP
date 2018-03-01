@@ -1,25 +1,23 @@
-/* Programa que transforma carácteres mayúsculas
-   en minúsculas aprovechando la asignación forzada
+/* Programa que transforma carÃ¡cteres mayÃºsculas
+   en minÃºsculas aprovechando la asignaciÃ³n forzada
    que realiza C++ cuando se le asigna una letra a
-   una variable numérica. */
-	
+   una variable numÃºrica. */
+
 #include<iostream>
-	
+
 using namespace std;
-	
+
 int main(){
-  char mayuscula1;                          // No se pueden asignar carácteres a variables
+  char mayuscula1;                          // No se pueden asignar carÃ¡cteres a variables
   int mayuscula;                            // enteras directamente con las funciones de E/S
   char minuscula;                           // por lo que me he auxiliado de una tercera variable
-  // mayúscula1. 
-  cout << "Inserte letra mayúscula: ";
+  																					// mayÃºscula1.
+  cout << "Inserte letra mayÃºscula: ";
   cin >> mayuscula1;
-	   
+
   mayuscula = mayuscula1;
-	   	   
+
   minuscula = mayuscula + 32;
-	   
-  cout << "Letra en minuscula: " << minuscula << "\n";
-	   
-  system("pause");
+
+  cout << "Letra en minÃºscula: " << minuscula << "\n";
 }
