@@ -1,27 +1,25 @@
 /* Programa que calcula la longitud de la circunferencia
-   y el 醨ea del c韗culo a partir del radio indicado.
+   y el 谩rea del c铆rculo a partir del radio indicado.
 */
 
-#include <iostream>     // Inclusi髇 de recursos de E/S
+#include <iostream>     // Inclusi贸n de recursos de E/S
 
 using namespace std;
 
 int main() {
-  double radio;              // Declaraci髇 de variables y constante PI
+  double radio;              // Declaraci贸n de variables y constante PI
   double longitud_circunferencia;
   double area_circulo;
   const double PI = 3.1415927;
-   
+
   cout << "Inserte el valor del  radio de la circunferencia: ";   // El programa solicita los datos
   cin >> radio;
-   
+
   longitud_circunferencia = 2 * PI * radio;                       // Operaciones necesarias
   area_circulo = PI * radio * radio;
-   
-  cout << "La longitud de la circunferencia (en las mismas unidades que el radio dado) es: "  << longitud_circunferencia << "\n";    // Expresi髇 del resultado
-  cout << "El 醨ea del c韗culo (en esas mismas unidades cuadradas) es: " << area_circulo << "\n";
-   
-  system("pause");
+
+  cout << "La longitud de la circunferencia (en las mismas unidades que el radio dado) es: "  << longitud_circunferencia << "\n";    // Expresi贸n del resultado
+  cout << "El 谩rea del c铆rculo (en esas mismas unidades cuadradas) es: " << area_circulo << "\n";
 }
 
-/* Aclaraci髇: Ha sido incluido el valor de PI como un valor constante. */
+/* Aclaraci贸n: Ha sido incluido el valor de PI como un valor constante. */

@@ -1,40 +1,38 @@
-/* Programa que estima la poblaci髇 de un territorio a los
-   3 a駉s a partir de las tasas de de natalidad, mortalidad
-   y migraci髇 */
-   
-#include <iostream>     // Inclsi髇 de recursos de E/S
+/* Programa que estima la poblaci贸n de un territorio a los
+   3 a帽os a partir de las tasas de de natalidad, mortalidad
+   y migraci贸n */
+
+#include <iostream>     // Inclsi贸n de recursos de E/S
 
 using namespace std;
 
 int main() {
-  long long poblacion0;          // Declaraci髇 de variables, he tenido que
+  long long poblacion0;          // Declaraci贸n de variables, he tenido que
   int tasa_nat;                  // asignar long long a las variables que se
-  int tasa_mort;                 // refieren a la poblaci髇 porque experimentaba
-  int tasa_migracion;            // importantes p閞didas de precisi髇 al utilizar
+  int tasa_mort;                 // refieren a la poblaci贸n porque experimentaba
+  int tasa_migracion;            // importantes p茅rdidas de precisi贸n al utilizar
   long long poblacion1;          // int o long.
   long long poblacion2;
-  long long poblacion3;            
-	 
-  cout << "Inserte poblaci髇 inicial del territorio: ";   // El programa solicita los datos necesarios,
-  cin >> poblacion0;                                      // la poblaci髇 inicial y las tasas de natalidad,
-  cout << "Inserte tasa de  natalidad: ";                 // mortalidad y migraci髇.
+  long long poblacion3;
+
+  cout << "Inserte poblaci贸n inicial del territorio: ";   // El programa solicita los datos necesarios,
+  cin >> poblacion0;                                      // la poblaci贸n inicial y las tasas de natalidad,
+  cout << "Inserte tasa de  natalidad: ";                 // mortalidad y migraci贸n.
   cin >> tasa_nat;
   cout << "Inserte tasa de mortalidad: ";
   cin >> tasa_mort;
-  cout << "Inserte tasa de migraci髇: ";
+  cout << "Inserte tasa de migraci贸n: ";
   cin >> tasa_migracion;
-	
-  poblacion1 = poblacion0 + ( poblacion0 * tasa_nat / 1000 ) - ( poblacion0 * tasa_mort / 1000 ) + ( poblacion0 * tasa_migracion / 1000 );      // Operaciones necesarias, se realizan 
-  poblacion2 = poblacion1 + ( poblacion1 * tasa_nat / 1000 ) - ( poblacion1 * tasa_mort / 1000 ) + ( poblacion1 * tasa_migracion / 1000 );      // por a駉s ya que cada tasa se debe aplicar
-  poblacion3 = poblacion2 + ( poblacion2 * tasa_nat / 1000 ) - ( poblacion2 * tasa_mort / 1000 ) + ( poblacion2 * tasa_migracion / 1000 );      // al dato de ese a駉.
-	
-  cout << "La poblaci髇 estimada tras 3 a駉s es de: " << poblacion3 << " habitantes. \n";   // Se expresa la soluci髇 deseada.
-	
-  system("pause");
+
+  poblacion1 = poblacion0 + ( poblacion0 * tasa_nat / 1000 ) - ( poblacion0 * tasa_mort / 1000 ) + ( poblacion0 * tasa_migracion / 1000 );      // Operaciones necesarias, se realizan
+  poblacion2 = poblacion1 + ( poblacion1 * tasa_nat / 1000 ) - ( poblacion1 * tasa_mort / 1000 ) + ( poblacion1 * tasa_migracion / 1000 );      // por a帽os ya que cada tasa se debe aplicar
+  poblacion3 = poblacion2 + ( poblacion2 * tasa_nat / 1000 ) - ( poblacion2 * tasa_mort / 1000 ) + ( poblacion2 * tasa_migracion / 1000 );      // al dato de ese a帽o.
+
+  cout << "La poblaci贸n estimada tras 3 a帽os es de: " << poblacion3 << " habitantes. \n";   // Se expresa la soluci贸n deseada.
 }
-	
+
 /* Este programa directamente considera que las defunciones suponen un
-   decrecimiento de la poblaci髇, por lo que a la tasa de mortalidad
-   se le debe asignar un n鷐ero positivo. Solamente es necesario
-   especificar el signo de la tasa de migraci髇 ya que esta puede ser
+   decrecimiento de la poblaci贸n, por lo que a la tasa de mortalidad
+   se le debe asignar un n煤mero positivo. Solamente es necesario
+   especificar el signo de la tasa de migraci贸n ya que esta puede ser
    tanto negativa como positiva */

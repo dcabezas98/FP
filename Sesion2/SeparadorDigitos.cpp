@@ -1,25 +1,23 @@
 /* Programa que imprime separados dos espacios
-   los dígitos del número de 3 cifras introducido
-   por el usuario*/
-   
-#include <iostream>     // Inclusión recursos E/S
+   los dÃ­gitos del nÃºmero de 3 cifras introducido
+   por el usuario */
 
-using namespace std;    
+#include <iostream>     // InclusiÃ³n recursos E/S
+
+using namespace std;
 
 int main() {
-  int numero;           // Declaración de variables
+  int numero;           // DeclaraciÃ³n de variables
   int unidades;
   int decenas;
   int centenas;
-	
-  cout << "Introduzca un número de 3 cifras: ";     // Se solicita la información
+
+  cout << "Introduzca un nÃºmero de 3 cifras: ";     // Se solicita la informaciÃ³n
   cin >> numero;
-	
-  centenas = numero / 100;                                // Operaciones basadas en que cualquier número abc puede expresarse
+
+  centenas = numero / 100;                                // Operaciones basadas en que cualquier nÃºmero abc puede expresarse
   decenas = (numero - centenas * 100) / 10;               // como 100a + 10b + c. Aprovechando el truncamiento que realiza
-  unidades = numero - centenas * 100 - decenas * 10;      // el programa al asignar un número decimal a una variable int. 
-	
+  unidades = numero - centenas * 100 - decenas * 10;      // el programa al asignar un nÃºmero decimal a una variable int.
+
   cout<< "  " << centenas << "  " << decenas << "  " << unidades << "\n";    // Se expresan las cifras por separado
-	
-  system ("pause");
-}	
+}

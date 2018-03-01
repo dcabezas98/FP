@@ -1,33 +1,31 @@
-/* Programa para calcular el valor que toma la funci髇
-   gaussiana en una determinada abscisa a partir 
-   de los par醡etros mu y sigma */
-	
-#include <iostream>   // Inclusi髇 de los recursos de E/S
-#include <cmath>      // Inclusi髇 de las funciones matem醫icas necesarios
+/* Programa para calcular el valor que toma la funci贸n
+   gaussiana en una determinada abscisa a partir
+   de los par谩metros mu y sigma */
+
+#include <iostream>   // Inclusi贸n de los recursos de E/S
+#include <cmath>      // Inclusi贸n de las funciones matem谩ticas necesarios
 
 using namespace std;
 
 int main() {
-  double mu;                  // Declaraci髇 de las variables
-  double sigma;               // y constante necesarias 
+  double mu;                  // Declaraci贸n de las variables
+  double sigma;               // y constante necesarias
   const double PI = 3.1416;
   double X;
   double gaussY;
   double denominador;
   double exponente;
-	
-  cout << "Inserte valor del par醡etro mu: ";                                               // El programa solicita los datos
-  cin >> mu;                                    
-  cout << "Inserte valor del par醡etro sigma: ";
+
+  cout << "Inserte valor del par谩metro mu: ";                                               // El programa solicita los datos
+  cin >> mu;
+  cout << "Inserte valor del par谩metro sigma: ";
   cin >> sigma;
-  cout << "Inserte punto de abscisa para el que quiera calcular el valor de la funci髇: ";  
+  cout << "Inserte punto de abscisa para el que quiera calcular el valor de la funci贸n: ";
   cin >> X;
-	
+
   denominador = sigma * sqrt(2 * PI);                                                       // Operaciones necesarias
   exponente = -0.5 * pow( (X - mu) / sigma, 2 );
   gaussY = exp(exponente) / denominador;
-   
-  cout << "La funci髇 gaussiana seleccionada toma el valor de: "<< gaussY << " en dicho punto\n";   // Se expresa el resultado
-   
-  system ("pause");
-}	
+
+  cout << "La funci贸n gaussiana seleccionada toma el valor de: "<< gaussY << " en dicho punto\n";   // Se expresa el resultado
+}
