@@ -1,64 +1,64 @@
-/* Programa que estima la poblaci髇 de un territorio a los
-   ciertos a駉s a partir de las tasas de de natalidad, mortalidad
-   y migraci髇. Tambi閚 calcula los a駉s necesarios para que el 
-   territorio doble su poblaci髇 */
-   
-#include <iostream>     // Inclsi髇 de recursos de E/S.
-#include <cmath>			// Iclusi髇 de recursos matem醫icos.
+/* Programa que estima la poblaci贸n de un territorio a los
+   ciertos a帽os a partir de las tasas de de natalidad, mortalidad
+   y migraci贸n. Tambi茅n calcula los a帽os necesarios para que el
+   territorio doble su poblaci贸n */
+
+#include <iostream>     // Inclsi贸n de recursos de E/S.
+#include <cmath>			// Inclusi贸n de recursos matem谩ticos.
 
 using namespace std;
 
 int main() {
-  long long poblacion_inicial, poblacion;                             
-  int tasa_nat, tasa_mort, tasa_migracion;          
+  long long poblacion_inicial, poblacion;
+  int tasa_nat, tasa_mort, tasa_migracion;
   int anos, anos_doble = 0;
-	
-  do { 
-    cout << "Inserte poblaci髇 inicial del territorio: ";   
+
+  do {
+    cout << "Inserte poblaci贸n inicial del territorio: ";
     cin >> poblacion_inicial;
   } while (poblacion_inicial < 0);
-	
+
   do {
-    cout << "Inserte tasa de  natalidad: ";                 
+    cout << "Inserte tasa de natalidad: ";
     cin >> tasa_nat;
   } while (tasa_nat < 0 || tasa_nat > 1000);
-	
+
   do {
     cout << "Inserte tasa de mortalidad: ";
     cin >> tasa_mort;
   } while (tasa_mort < 0 || tasa_mort > 1000);
-	
-  do {
-    cout << "Inserte tasa de migraci髇: ";
-    cin >> tasa_migracion;
-  } while (tasa_migracion > 1000 || tasa_migracion < -1000);   // En el enunciado del ejercicio dice que debe ser positiva, sin embargo, tiene sentido considerar que exista emigraci髇.
 
   do {
-    cout << "緿espu閟 de c鷄ntos a駉s quiere calcular la poblaci髇 del territorio? ";
+    cout << "Inserte tasa de migraci贸n: ";
+    cin >> tasa_migracion;
+  } while (tasa_migracion > 1000 || tasa_migracion < -1000);   // En el enunciado del ejercicio dice que debe ser positiva, sin embargo, tiene sentido considerar que exista emigraci锟絥.
+
+  do {
+    cout << "Despu茅s de cu谩ntos a帽os quiere calcular la poblaci贸n del territorio? ";
     cin >> anos;
   } while (anos < 0);
-	
+
   poblacion = poblacion_inicial;
-	
+
   for (int contador = 1; contador <= anos; contador++ ) {
-    poblacion = poblacion + ( poblacion * tasa_nat / 1000 ) - ( poblacion * tasa_mort / 1000 ) + ( poblacion * tasa_migracion / 1000 ); 
+    poblacion = poblacion + ( poblacion * tasa_nat / 1000 ) - ( poblacion * tasa_mort / 1000 ) + ( poblacion * tasa_migracion / 1000 );
   }
-	
-  cout << "La poblaci髇 estimada tras " << anos << " a駉s es de: " << poblacion << " habitantes." << endl;
-	
-  poblacion = poblacion_inicial;                                // Se le restaura el valor a la poblaci髇 para proceder al segundo c醠culo.
-	
+
+  cout << "La poblaci贸n estimada tras " << anos << " a帽os es de: " << poblacion << " habitantes." << endl;
+
+  poblacion = poblacion_inicial; // Se le restaura el valor a la poblaci贸n para proceder al segundo c谩lculo.
+
   while (poblacion < 2 * poblacion_inicial) {
     poblacion = poblacion + ( poblacion * tasa_nat / 1000 ) - ( poblacion * tasa_mort / 1000 ) + ( poblacion * tasa_migracion / 1000 );
     anos_doble++;
   }
-	
-  cout << "A駉s para duplicar la poblaci髇: " << anos_doble << endl;
-  cout << "Poblaci髇 tras " << anos_doble << " a駉s: " << poblacion << " habitantes." << endl;
+
+  cout << "A帽os para duplicar la poblaci贸n: " << anos_doble << endl;
+  cout << "Poblaci贸n tras " << anos_doble << " a帽os: " << poblacion << " habitantes." << endl;
 }
 
 /* Este programa directamente considera que las defunciones suponen un
-   decrecimiento de la poblaci髇, por lo que a la tasa de mortalidad
-   se le debe asignar un n鷐ero positivo. Solamente es necesario
-   especificar el signo de la tasa de migraci髇 ya que esta puede ser
+   decrecimiento de la poblaci贸n, por lo que a la tasa de mortalidad
+   se le debe asignar un n煤mero positivo. Solamente es necesario
+   especificar el signo de la tasa de migraci贸n ya que esta puede ser
    tanto negativa como positiva */

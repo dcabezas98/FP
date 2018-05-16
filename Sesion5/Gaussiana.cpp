@@ -1,46 +1,46 @@
-/* Programa para calcular el valor que toma la funci髇
-   gaussiana en un determinado intervalo de abscisa a partir 
-   de los par醡etros mu y sigma. Incluye diversos filtros
+/* Programa para calcular el valor que toma la funci贸n
+   gaussiana en un determinado intervalo de abscisa a partir
+   de los par谩metros mu y sigma. Incluye diversos filtros
    de entrada */
-	
-#include <iostream>   // Inclusi髇 de los recursos de E/S
-#include <cmath>      // Inclusi髇 de las funciones matem醫icas necesarios
+
+#include <iostream>   // Inclusi贸n de los recursos de E/S
+#include <cmath>      // Inclusi贸n de las funciones matem谩ticas necesarios
 
 using namespace std;
 
 int main() {
-  double mu, sigma, maximo, minimo, incremento;        // Declaraci髇 de las variables
-  double denominador, exponente, abscisa, gauss;       // y constante necesarias 
+  double mu, sigma, maximo, minimo, incremento;        // Declaraci贸n de las variables
+  double denominador, exponente, abscisa, gauss;       // y constante necesarias
   const double PI = 3.1416;
-	
-  cout << "Inserte valor del par醡etro Mu, esperanza: ";                           
-  cin >> mu;                                    
-	
+
+  cout << "Inserte valor del par谩metro Mu, esperanza: ";
+  cin >> mu;
+
   do {
-    cout << "Inserte valor del par醡etro Sigma, desviaci髇 (mayor o igual que 0): ";
+    cout << "Inserte valor del par谩metro Sigma, desviaci贸n (mayor o igual que 0): ";
     cin >> sigma;
   } while (sigma < 0);
-	
-  denominador = sigma * sqrt(2 * PI);                  // El denominador s髄o depende de Sigma, no tiene sentido que entre en el bucle con el resto de c醠culos.
-	
-  cout << "Inserte el menor valor de abscisa para el que quiere calcular la imagen: ";  
+
+  denominador = sigma * sqrt(2 * PI);    // El denominador s贸lo depende de Sigma, no tiene sentido que entre en el bucle con el resto de c谩lculos.
+
+  cout << "Inserte el menor valor de abscisa para el que quiere calcular la imagen: ";
   cin >> minimo;
-	
+
   do {
     cout << "Inserte el mayor valor de abscisa para el que que quiere calcular la imagen: ";
     cin >> maximo;
   } while (maximo < minimo);
-	
-  cout << "緾ada cu醤to quiere calcular el valor de la funci髇?: ";
+
+  cout << "Cada cu谩nto quiere calcular el valor de la funci贸n?: ";
   cin >> incremento;
-	
+
   abscisa = minimo;
-	
-  cout << "Valores de la funci髇 para cada abscisa del intervalo:" << endl;
-	
+
+  cout << "Valores de la funci贸n para cada abscisa del intervalo:" << endl;
+
   while (abscisa <= maximo) {
     exponente = -0.5 * pow( (abscisa - mu) / sigma, 2 );				// Operaciones necesarias
-    gauss = exp(exponente) / denominador; 
+    gauss = exp(exponente) / denominador;
     cout << "X= " << abscisa << "\t\tY= " << gauss << endl;		   // Se expresa el resultado
     abscisa = abscisa + incremento;
   }

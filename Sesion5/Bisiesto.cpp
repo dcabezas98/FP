@@ -1,23 +1,23 @@
-/* Programa que dice si un año es bisiesto o no */
+/* Programa que dice si un aÃ±o es bisiesto o no */
 
 #include<iostream>
 #include<cmath>
-	
+
 using namespace std;
-	
+
 int main () {
-		
+
   int ano;
   bool bisiesto;
-								
-  cout << "Inserte año: ";
+
+  cout << "Inserte aÃ±o: ";
   cin >> ano;
-		
+
   bisiesto = ((ano % 400) == 0) || ((ano % 4) == 0 && (ano % 100) != 0);
-		
+
   if (bisiesto)
     cout << "Bisiesto." << endl;
-		
-  else 
+
+  else
     cout << "No bisiesto." << endl;
 }
