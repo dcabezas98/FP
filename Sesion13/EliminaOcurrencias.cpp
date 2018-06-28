@@ -1,6 +1,6 @@
-/* Programa que elimina todas las apariciones del car·cter introducido
+/* Programa que elimina todas las apariciones del car√°cter introducido
    en el texto elegido. */
-	
+
 #include<iostream>
 
 using namespace std;
@@ -12,7 +12,7 @@ private:
   static const int TAMANIO = 2500000;
   char vector_privado[TAMANIO];
   int total_utilizados;
-   
+
   void IntercambiaComponentes_en_Posiciones(int pos_izda, int pos_dcha){
     char intercambia;
 
@@ -24,14 +24,14 @@ public:
   SecuenciaCaracteres()
     :total_utilizados(0) {
   }
-   
+
   void EliminaOcurrencia(char a_borrar) {
-   	
+
     int escritura = 0;
     int eliminados = 0;
-   	
+
     for(int lectura = 0; lectura < total_utilizados; lectura++) {
-   		
+
       if(vector_privado[lectura] != a_borrar) {
 	Modifica(escritura, vector_privado[lectura]);
 	escritura++;
@@ -42,26 +42,26 @@ public:
     }
     total_utilizados = total_utilizados - eliminados;
   }
-   
+
   int TotalUtilizados(){
     return total_utilizados;
   }
-   
+
   int Capacidad(){
     return TAMANIO;
   }
-   
+
   void EliminaTodos(){
     total_utilizados = 0;
   }
-   
+
   void Aniade(char nuevo){
     if (total_utilizados < TAMANIO){
       vector_privado[total_utilizados] = nuevo;
       total_utilizados++;
     }
   }
-   
+
   void Modifica(int posicion, char nuevo){
     if (posicion >= 0 && posicion < total_utilizados)
       vector_privado[posicion] = nuevo;
@@ -70,10 +70,10 @@ public:
   char Elemento(int indice){
     return vector_privado[indice];
   }
-   
+
   string ToString(){
-    // Si el n˙mero de caracteres en memoria es muy grande,
-    // es mucho m·s eficiente reservar memoria previamente
+    // Si el n√∫mero de caracteres en memoria es muy grande,
+    // es mucho m√°s eficiente reservar memoria previamente
     // y usar push_back
 
     string cadena;
@@ -82,7 +82,7 @@ public:
 
     for (int i=0; i < total_utilizados; i++)
       cadena.push_back(vector_privado[i]);
-    //cadena = cadena + vector_privado[i];  <- Evitarlo. Muy ineficiente para tamaÒos grandes
+    //cadena = cadena + vector_privado[i];  <- Evitarlo. Muy ineficiente para tama√±os grandes
 
     return cadena;
   }
@@ -102,12 +102,12 @@ public:
     else
       return -1;
   }
-   
+
   int PrimeraOcurrencia (char buscado){
     return PrimeraOcurrenciaEntre (0, total_utilizados - 1, buscado);
-  }
-   
+
   int BusquedaBinaria (char buscado){
+	}
     int izda, dcha, centro;
     bool encontrado = false;
 
@@ -134,30 +134,30 @@ public:
 };
 
 int main() {
-	
+
   const char TERMINADOR = '#';
   char caracter, a_borrar;
   SecuenciaCaracteres secuencia;
-	
+
   cout << "Introduzca secuencia de caracteres, pulse " << TERMINADOR << " para finalizar: ";
   caracter = cin.get();
-	
+
   int i = 0;
-	
+
   while (caracter != TERMINADOR) {
-		
+
     secuencia.Aniade(caracter);
     i++;
-		
+
     caracter = cin.get();
   }
-	
-  cout << "øQuÈ caracter quiere eliminar? ";
+
+  cout << "¬øQu√© caracter quiere eliminar? ";
   a_borrar = cin.get();
-	
+
   secuencia.EliminaOcurrencia(a_borrar);
-	
-  cout << "La secuencia ahora queda asÌ: " << endl << endl;
-	
+
+  cout << "La secuencia ahora queda as√≠: " << endl << endl;
+
   cout << secuencia.ToString();
 }
