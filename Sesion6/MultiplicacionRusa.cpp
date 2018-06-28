@@ -1,34 +1,34 @@
-/* Programa que calcula el producto de dos números
-   utilizando el algoritmo de la multiplicación rusa. */
-	
+/* Programa que calcula el producto de dos nÃºmeros
+   utilizando el algoritmo de la multiplicaciÃ³n rusa. */
+
 #include<iostream>
-	
+
 using namespace std;
-	
+
 int main () {
-		
-  long long multiplicando, multiplicador, producto;              // Long long para multiplicar números grandes.
-		
+
+  long long multiplicando, multiplicador, producto;              // Long long para multiplicar nÃºmeros grandes.
+
   do {
     cout << "Inserte el primer numero a multiplicar: ";
     cin >> multiplicando;
   } while (multiplicando < 0);
-			
+
   do {
-    cout << "Inserte el segundo número a multiplicar: ";  
+    cout << "Inserte el segundo nÃºmero a multiplicar: ";
     cin >> multiplicador;
   } while (multiplicador < 0);
-		
+
   producto = 0;
-			       		  
-  while (multiplicando >= 1) {                    
-								
+
+  while (multiplicando >= 1) {
+
     if (multiplicando % 2 == 1)
       producto += multiplicador;
-					
+
     multiplicando /= 2;
-    multiplicador += multiplicador;	
+    multiplicador += multiplicador;
   }
-				
-  cout << "Su producto es: " << producto << endl;			
+
+  cout << "Su producto es: " << producto << endl;
 }
