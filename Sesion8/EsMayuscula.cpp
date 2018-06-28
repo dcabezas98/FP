@@ -1,5 +1,5 @@
 /* Programa que lee una secuencia de caracteres hasta que se introduzca
-   un terminador y devuelve el número de letras mayúsculas introducidas
+   un terminador y devuelve el nÃºmero de letras mayÃºsculas introducidas
    en dicha secuencia. */
 
 #include<iostream>
@@ -10,34 +10,34 @@ const char TERMINADOR = '#';
 
 bool EsMayuscula (char letra) {
   bool es_mayuscula = false;
-		
-  if ((letra >= 'A' && letra <= 'Z') || letra == 'Ñ')
+
+  if ((letra >= 'A' && letra <= 'Z') || letra == 'ï¿½')
     es_mayuscula = true;
-	
+
   return es_mayuscula;
 }
 
 char LeeMayuscula () {
   char letra;
-	
+
   do {
-    cout << "Inserte letra mayúscula: ";
+    cout << "Inserte letra mayÃºscula: ";
     cin >> letra;
-  } while (letra < 'A' && letra > 'Z' && letra != 'Ñ' && letra != TERMINADOR);
-	
+  } while (letra < 'A' && letra > 'Z' && letra != 'ï¿½' && letra != TERMINADOR);
+
   return letra;
 }
 
 int main () {
-	
+
   int numero_mayusculas = 0;
   char letra;
-	
+
   do {
     letra = LeeMayuscula ();
     if (EsMayuscula(letra))
       numero_mayusculas++;
   } while (letra != TERMINADOR);
-	
-  cout << "Se han introducido " << numero_mayusculas << " letras mayúsculas." << endl;
+
+  cout << "Se han introducido " << numero_mayusculas << " letras mayÃºsculas." << endl;
 }
